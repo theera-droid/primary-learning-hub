@@ -53,3 +53,12 @@ body{background:var(--bg);font-family:Tahoma,'Leelawadee UI',sans-serif;color:va
 .lesson-resource-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media screen and (max-width:480px){.lesson-resource-links{grid-template-columns:1fr}}
+
+/* Aligned library navigation control */
+.header button.grade-nav-title{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:42px;padding:9px 15px;background:#edf2e8;border:1px solid #dce5d6;border-radius:10px;font-size:14px;line-height:1.5;vertical-align:middle;transition:background .15s,border-color .15s}
+.header button.grade-nav-title:hover,.header button.grade-nav-title[aria-expanded="true"]{background:#e2ebda;border-color:#becfb5}
+.grade-chevron{display:block;flex:0 0 16px;transition:transform .15s}
+.grade-nav-title[aria-expanded="true"] .grade-chevron{transform:rotate(180deg)}
+.grade-nav-links{top:calc(100% + 7px);left:auto;right:0;border-radius:10px;box-shadow:0 10px 26px #153f3618}
+.grade-navigation:after{content:'';position:absolute;top:100%;left:0;right:0;height:8px}
+@media(prefers-reduced-motion:reduce){.grade-chevron,.header button.grade-nav-title{transition:none}}
