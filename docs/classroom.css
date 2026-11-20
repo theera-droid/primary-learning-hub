@@ -62,3 +62,9 @@ body{background:var(--bg);font-family:Tahoma,'Leelawadee UI',sans-serif;color:va
 .grade-nav-links{top:calc(100% + 7px);left:auto;right:0;border-radius:10px;box-shadow:0 10px 26px #153f3618}
 .grade-navigation:after{content:'';position:absolute;top:100%;left:0;right:0;height:8px}
 @media(prefers-reduced-motion:reduce){.grade-chevron,.header button.grade-nav-title{transition:none}}
+
+/* Quiet underlined resource links */
+.lesson-resource-links{gap:0}
+.lesson-resource-links .button,.lesson-resource-links .button.secondary{background:transparent;color:#174d42;border:0;border-bottom:1px solid #d8e1d4;border-radius:0;box-shadow:none;padding:15px 0;text-align:left;font-weight:600;transition:color .15s,border-color .15s;filter:none}
+.lesson-resource-links .button:hover{background:transparent;color:#a5542d;border-bottom-color:#a5542d;box-shadow:none;filter:none}
+@media screen and (max-width:800px){.lesson-resource-links{column-gap:20px}}
